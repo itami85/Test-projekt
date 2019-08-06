@@ -29,7 +29,7 @@
         </thead>
         <tbody>
         <tr>
-            <td>Lukas</td>
+            <td>${results[0]}</td>
             <td>3</td>
             <td>3</td>
             <td>0</td>

@@ -1,5 +1,7 @@
 package com.aws.codestar.projecttemplates.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,7 +29,9 @@ public class BombermanController {
 
     @RequestMapping(method = RequestMethod.GET, path = "submitMatch")
     public ModelAndView submitMatchController() {
-        ModelAndView mav = new ModelAndView("bomberman/submitMatch");
+        final ArrayList<String> spielerErgebnisse = new ArrayList<String>();
+
+        ModelAndView mav = new ModelAndView("bomberman/submitMatch", "results", spielerErgebnisse);
         mav.addObject("siteName", this.siteName);
         return mav;
     }
