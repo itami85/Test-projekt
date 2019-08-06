@@ -14,7 +14,6 @@
 <spring:url value="/resources/tweet.svg" var="tweetSvg"/>
 
 <link href="${stylesCss}" rel="stylesheet">
-<link href="${gradientsCss}" rel="stylesheet">
 </head>
 <body class="">
 <div class="wrapper">
@@ -51,7 +50,5 @@
 <footer>
     <p class="footer-contents">Designed and developed with <a href="https://aws.amazon.com/careers/devtools-jobs/">♥</a> in Seattle.</p>
 </footer>
-
-<script src={$setBackgroundJs}"></script>
 </body>
 </html>
