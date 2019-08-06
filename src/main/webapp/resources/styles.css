@@ -12,7 +12,7 @@ html {
   font-family: "Helvetica Neue", Roboto, Arial, sans-serif;
   font-size: 62.5%;
   color: white;
-  background: linear-gradient(to bottom, #2473ab 0%,#1e528e 70%,#5b7983 100%);
+  background: black;
 }
 
 body {
@@ -188,4 +188,52 @@ footer .footer-contents {
   .graphics {
     display: none;
   }
+}
+
+table {
+  border: 4px solid #555555;
+  background-color: #555555;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+td:nth-child(even) {
+  background: #398AA4;
+}
+thead {
+  background: #398AA4;
+  border-bottom: 10px solid #398AA4;
+}
+thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 2px solid #398AA4;
+}
+thead th:first-child {
+  border-left: none;
+}
+
+tfoot td {
+  font-size: 13px;
+}
+tfoot .links {
+  text-align: right;
+}
+tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
