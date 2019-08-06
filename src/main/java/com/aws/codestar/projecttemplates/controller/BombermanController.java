@@ -24,13 +24,7 @@ public class BombermanController {
 
     @RequestMapping(method = RequestMethod.GET, path = "leaderboard")
     public ModelAndView leaderboardController() {
-        ModelAndView mav = new ModelAndView("bomberman/leaderboard");
-        mav.addObject("siteName", this.siteName);
-        return mav;
-    }
 
-    @RequestMapping(method = RequestMethod.GET, path = "submitMatch")
-    public ModelAndView submitMatchController() {
         final ArrayList<SpielerErgebnisse> spielerErgebnisse = new ArrayList<SpielerErgebnisse>();
         spielerErgebnisse.add(new SpielerErgebnisse("Lukas", 3, 3, 0, 9));
         spielerErgebnisse.add(new SpielerErgebnisse("Kai", 4, 2, 2, 6));
@@ -39,7 +33,16 @@ public class BombermanController {
         spielerErgebnisse.add(new SpielerErgebnisse("Andreas", 4, 4, 0, 12));
         spielerErgebnisse.add(new SpielerErgebnisse("Stefan", 5, 2, 3, 6));
 
-        ModelAndView mav = new ModelAndView("bomberman/submitMatch", "results", spielerErgebnisse);
+        ModelAndView mav = new ModelAndView("bomberman/leaderboard", "results", spielerErgebnisse);
+        mav.addObject("siteName", this.siteName);
+        mav.addObject("spieler", spielerErgebnisse);
+        return mav;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "submitMatch")
+    public ModelAndView submitMatchController() {
+
+        ModelAndView mav = new ModelAndView("bomberman/submitMatch");
         mav.addObject("siteName", this.siteName);
         return mav;
     }
