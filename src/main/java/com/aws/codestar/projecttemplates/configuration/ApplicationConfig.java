@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
+import com.aws.codestar.projecttemplates.controller.BombermanController;
 import com.aws.codestar.projecttemplates.controller.HelloWorldController;
 import com.aws.codestar.projecttemplates.controller.WetterController;
 
@@ -32,6 +33,11 @@ public class ApplicationConfig {
     @Bean
     public WetterController weatherController() {
         return new WetterController(this.siteName);
+    }
+
+    @Bean
+    public BombermanController bombermanController() {
+        return new BombermanController(this.siteName);
     }
 
     /**
