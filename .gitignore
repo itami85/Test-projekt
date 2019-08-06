@@ -1,2 +1,7 @@
 .idea/*
 HelloWorld.iml
+.project
+.settings/
+src/main/main.iml
+src/test/test.iml
+target/
