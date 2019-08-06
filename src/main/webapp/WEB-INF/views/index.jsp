@@ -30,6 +30,7 @@
     </div>
 
     <header>
+        Sitename: ${siteName}
         <nav class="website-nav">
             <ul>
                 <li><a class="home-link" href="https://aws.amazon.com/">Home</a></li>
