@@ -22,16 +22,22 @@ public class BombermanController {
 
     @RequestMapping(method = RequestMethod.GET, path = "leaderboard")
     public ModelAndView leaderboardController() {
-        ModelAndView mav = new ModelAndView("bomberman/leaderboard");
+
+        final ArrayList<String> spielerErgebnisse = new ArrayList<String>();
+        spielerErgebnisse.add("Simon");
+        spielerErgebnisse.add("Andreas");
+        spielerErgebnisse.add("Martin");
+
+        ModelAndView mav = new ModelAndView("bomberman/leaderboard", "results", spielerErgebnisse);
         mav.addObject("siteName", this.siteName);
+        mav.addObject("spieler", spielerErgebnisse);
         return mav;
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "submitMatch")
     public ModelAndView submitMatchController() {
-        final ArrayList<String> spielerErgebnisse = new ArrayList<String>();
 
-        ModelAndView mav = new ModelAndView("bomberman/submitMatch", "results", spielerErgebnisse);
+        ModelAndView mav = new ModelAndView("bomberman/submitMatch");
         mav.addObject("siteName", this.siteName);
         return mav;
     }

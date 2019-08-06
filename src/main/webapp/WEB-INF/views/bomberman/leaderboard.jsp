@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>{$siteName}</title>
+<title>${siteName}</title>
 <meta name="description" content=""/>
 
 <spring:url value="/resources/gradients.css" var="gradientsCss"/>
@@ -17,6 +18,10 @@
 </head>
 <body class="">
 <div class="wrapper">
+
+    <h1>Bomberman Hall of Fame</h1>
+
+
     <table>
         <thead>
         <tr>
@@ -28,15 +33,20 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>${results[0]}</td>
-            <td>3</td>
-            <td>3</td>
-            <td>0</td>
-            <td>9</td>
-        </tr>
+            <c:forEach var="spieler" items="${results}">
+                <tr>
+                    <td>${spieler}</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>9</td>
+                </tr>
+            </c:forEach>
         </tbody>
     </table>
+
+
+
 </div>
 
 <footer>
