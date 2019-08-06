@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Basic Spring MVC controller that handles all GET requests.
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/weather")
 public class WetterController {
 
     private final String siteName;
@@ -18,10 +18,10 @@ public class WetterController {
         this.siteName = siteName;
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "weather")
+    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView weatherController() {
         ModelAndView mav = new ModelAndView("weather");
-        mav.addObject("siteName", "Weather App");
+        mav.addObject("siteName", this.siteName);
         return mav;
     }
 
