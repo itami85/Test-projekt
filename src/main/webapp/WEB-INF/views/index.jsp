@@ -45,7 +45,7 @@
             <img src="${tweetSvg}" alt="Tweet"/>
         </a>
         <div class="text">
-            <h1>Lukas ist wieder dabei</h1>
+            <h1>Lukas war gestern da</h1>
             <h2>bin drin</h2>
             <h2>Verrückt!</h2>
             <h2>Krasser Test</h2>
